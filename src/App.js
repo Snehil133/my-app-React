@@ -1,14 +1,14 @@
 import './App.css';
-import About from './components/About';
+// import About from './components/About';
 import Navbar from './components/Navbar';
 import TextForm from './components/TextForm';
 import React, {useState} from 'react';
 import Alert from './components/Alert';
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route
-} from "react-router-dom";
+// import {
+//   BrowserRouter as Router,
+//   Switch,
+//   Route
+// } from "react-router-dom";
 
 function App() {
   const[mode, setMode] = useState('light'); //whether dark 
@@ -85,7 +85,7 @@ function App() {
 
   return (
    <>
-    <Router>
+    {/* <Router> */}
      {/* // ******Dark Mode Props********* */}
 
      <Navbar title="Text App"  aboutUs = "About Us" mode ={mode} toggleMode={toggleMode} mode1 = {mode1} toggleMode1={toggleMode1} mode2={mode2} toggleMode2={toggleMode2}/>
@@ -102,16 +102,16 @@ function App() {
 
      {/* passing props here */}
      <div className="container my-3">
-     <Switch>
+     {/* <Switch>
           <Route exact path="/about">
             <About />
-          </Route>
-          <Route exact path="/">
+          </Route> */}
+          {/* <Route exact path="/"> */}
           <TextForm showAlert={showAlert} heading="Enter Your Text" mode ={mode}/>
-          </Route>
-        </Switch>
+          {/* </Route>
+        </Switch> */}
      </div>
-     </Router>
+     {/* </Router> */}
    </>
   );
 }
