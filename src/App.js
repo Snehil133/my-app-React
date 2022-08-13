@@ -1,14 +1,14 @@
 import './App.css';
-// import About from './components/About';
+import About from './components/About';
 import Navbar from './components/Navbar';
 import TextForm from './components/TextForm';
 import React, {useState} from 'react';
 import Alert from './components/Alert';
-// import {
-//   BrowserRouter as Router,
-//   Switch,
-//   Route
-// } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route
+} from "react-router-dom";
 
 function App() {
   const[mode, setMode] = useState('light'); //whether dark 
@@ -55,7 +55,7 @@ function App() {
   const toggleMode1 = () => {
     if(mode1 === 'light'){
       setMode1('white');
-      document.body.style.backgroundColor = '#c6c6c6'
+      document.body.style.backgroundColor = '#00F0A8'
       showAlert("Green mode has been enabled","success")
     }
     else{
@@ -85,10 +85,10 @@ function App() {
 
   return (
    <>
-    {/* <Router> */}
+    <Router>
      {/* // ******Dark Mode Props********* */}
 
-     <Navbar title="Text App"  aboutUs = "About Us" mode ={mode} toggleMode={toggleMode} mode1 = {mode1} toggleMode1={toggleMode1} mode2={mode2} toggleMode2={toggleMode2}/>
+     <Navbar title="Text Counter App"  aboutUs = "About Us" mode ={mode} toggleMode={toggleMode} mode1 = {mode1} toggleMode1={toggleMode1} mode2={mode2} toggleMode2={toggleMode2}/>
 
 
      {/* // *******Alert Props********* */}
@@ -102,16 +102,17 @@ function App() {
 
      {/* passing props here */}
      <div className="container my-3">
-     {/* <Switch>
+     <Switch>
           <Route exact path="/about">
-            <About />
-          </Route> */}
-          {/* <Route exact path="/"> */}
-          <TextForm showAlert={showAlert} heading="Enter Your Text" mode ={mode}/>
-          {/* </Route>
-        </Switch> */}
+            <About mode ={mode} />
+          </Route>
+          <Route exact path="/">
+          <TextForm showAlert={showAlert} heading=" Try Text Counter App - Word counter, Character Counter, Remove Extra Spaces" mode ={mode}/>
+          {/* <About/> */}
+          </Route>
+        </Switch>
      </div>
-     {/* </Router> */}
+     </Router>
    </>
   );
 }
