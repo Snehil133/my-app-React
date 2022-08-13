@@ -30,6 +30,7 @@ export default function TextForm(props) {
   const handleExtraSpaces = () => {
     let newText = text.split(/[ ]+/);
     setText(newText.join (" "))
+    props.showAlert("Extra Spaces Succesfully Removed","success")
   }
 
   const handleOnChange = (event) => {
@@ -60,7 +61,7 @@ export default function TextForm(props) {
     </div>
 
 
-    <div className="container my-3" style={{color: props.mode==="dark"?"white":"#042743"}} >
+    <div className="container my-3" style={{color: props.mode==="dark"?"white":"light"}}>
      <h2>Enter Your Text</h2>
      <b><p>{text.split (/\s+/).filter((element)=>{return element.length!==0}).length} Words || {text.length} Characters</p></b>
      <b><p>{0.008 * text.split (" ").filter((element)=>{return element.length!==0}).length} Total reading time</p></b> 
