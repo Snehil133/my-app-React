@@ -97,8 +97,6 @@ function App() {
     <Alert alert= {alert}/>
 
     {/* for using default props enable this */}
-    
-     {/* <Navbar/> */}
 
      {/* passing props here */}
      <div className="container my-3">
@@ -108,7 +106,6 @@ function App() {
           </Route>
           <Route exact path="/">
           <TextForm showAlert={showAlert} heading=" Try Text Counter App - Word counter, Character Counter, Remove Extra Spaces" mode ={mode}/>
-          {/* <About/> */}
           </Route>
         </Switch>
      </div>

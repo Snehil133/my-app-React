@@ -25,24 +25,19 @@ export default function Navbar(props) {
 
       {/* **************DARK MODE************ */}
 
-
-      {/* <form className="d-flex" role="search">
-        <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
-        <button className="btn btn-primary-primary" type="submit">Search</button>
-            </form> */}
             <div className={`form-check form-switch text-${props.mode==="light"?"dark":"light"}`}>
         <input className="form-check-input" onClick={props.toggleMode} type="checkbox" role="switch" id="flexSwitchCheckDefault"/>
-        <label className="form-check-label" hmtlFor="flexSwitchCheckDefault">Enable Dark Mode</label>
+        <label className="form-check-label mx-1" hmtlFor="flexSwitchCheckDefault">Enable Dark Mode</label>
       </div>
 
     {/* **************GREEN MODE************** */}
 
             <div className={`form-check form-switch text-${props.mode1==="light"?"dark":"#d3e7df"}`}>
         <input className="form-check-input" onClick={props.toggleMode1} type="checkbox" role="switch" id="flexSwitchCheckDefault"/>
-        <label className="form-check-label" hmtlFor="flexSwitchCheckDefault">Enable Green Mode</label>
+        <label className="form-check-label mx-1" hmtlFor="flexSwitchCheckDefault">Enable Green Mode</label>
       </div>
 
-{/* ******************BLUE MODE*************** */}
+    {/* ******************BLUE MODE*************** */}
 
             <div className={`form-check form-switch text-${props.mode2==="light"?"dark":"#6cd3f0"}`}>
         <input className="form-check-input" onClick={props.toggleMode2} type="checkbox" role="switch" id="flexSwitchCheckDefault"/>
